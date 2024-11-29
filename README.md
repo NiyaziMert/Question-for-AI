@@ -1,85 +1,68 @@
 
-# Question for AI (QfAI)
 
-**Question for AI (QfAI)**, Python ve PyQt5 ile oluşturulmuş, kullanıcı dostu bir yapay zeka uygulamasıdır. Bu uygulama, videolar üzerinde metin tabanlı sorgulamalara cevaplar üretip, sesli yanıtlarla geri dönüş yapar. Ayrıca, karakter oluşturma ve bunlara özel ses/medya yönetimi gibi özellikler sunar.
+#  Question for AI (QfAI)
 
-## Özellikler
+Question for AI (QfAI) is a user-friendly AI application built using Python and PyQt5. This application generates responses to text-based queries on videos and provides voice responses. Additionally, it offers features such as character creation and management, including personalized voices and media handling.
 
-- **Karakter Yönetimi**:
-  - Kullanıcı tanımlı karakterler ekleyebilir.
-  - Fotoğraf ve ses dosyalarını karakterlerle ilişkilendirme.
-  - Karakterleri düzenleme veya silme.
+#  Features
 
-- **API Entegrasyonu**:
-  - Google Gemini API'si ile entegrasyon.
-  - Kullanıcılar, projeye özel API anahtarlarını girerek sorulara yapay zeka yanıtları alabilir.
+Character Management:
+Add user-defined characters.
+Link photos and voice files to characters.
+Edit or delete characters.
+API Integration:
+Integration with the Google Gemini API.
+Users can input project-specific API keys to receive AI-generated answers to their queries.
+TTS (Text-to-Speech):
+Responses can be voiced with user-defined character-specific voices.
+Video Management:
+Play videos and generate custom outputs with character lip movements.
+Requirements
 
-- **TTS (Text-to-Speech)**:
-  - Yanıtlar, kullanıcının karakterine özgü seslerle seslendirilebilir.
+#  This project requires the following software and libraries:
 
-- **Video Yönetimi**:
-  - Video oynatma ve karakterlerin dudak hareketlerini içeren özel çıktılar oluşturma.
+Once you install the environment_uc.yaml and environment_stant_son.yaml packages via Conda, no additional installation is required.
+All dependencies are included in the .yaml sources, and no extra installation is needed.
+Installation
 
-## Gereksinimler
+#Install Dependencies:
+Run the following command to install the necessary libraries:
+conda env create -f environment_uc.yaml
+conda env create -f environment-stant_son.yaml
+Ensure that you run QfAI.py in the stant_son environment.
+The uc environment is exclusively for running .bat files. Simply installing it is sufficient, and no further action is required.
+API Key Configuration:
+Configure your API keys within the application.
+Character Database:
+The application stores character information in the characters.json file. If the file is missing, it will be created automatically upon the first run.
+Usage
 
-Bu proje için aşağıdaki yazılım ve kütüphaneler gereklidir:
-- ***********************
-- environment_uc.yaml ve environment-stant_son.yaml paketlerini conda ile kurduğunuz taktirde başka bir işleme gerek kalmayacaktır.
-- ************************
-- Gereksinimlerin hepsi .yaml kaynaklarında mevcuttur ekstra bir kurulum gerektirmez.
+#    Run the Application
+python QfAI.py
+Add a Character:
+Use the Add Character button in the right menu to create a new character.
+Run a Query:
+Select a character, type your query in the text box at the bottom, and click Run.
+Play a Video:
+The application clones the uploaded audio file and synchronizes it with the Gemini-generated response to produce a video with cloned voiceovers and lip synchronization. The video is then automatically played.
+File Structure
 
-## Kurulum
+#QfAI.py: Main application file.
+config.json: Configuration file containing API settings.
+characters.json: Stores character information.
+outputs/: Directory where the application saves generated output files.
+License
 
-1. **Gereksinimleri Yükleme**:
-   - Gerekli kütüphaneleri yüklemek için aşağıdaki komutu çalıştırın:
-   - conda env create -f environment_uc.yaml
-   - conda env create -f environment-stant_son.yaml
-   - QfAI.py'ı stant_son environment'ında çalıştırdığınıza emin olun.
-   - uc environment'ı .bat dosyalarının çalışması içindir sadece kurmanız yeterli farklı bir işlem yapmanıza gerek yok. 
+This project is licensed under the MIT License. For more details, see the LICENSE file.
 
-2. **API Key Ayarları**:
-   - Uygulama içerisinden API-Key ayarlarını yapın.
+#    Contributing
 
-3. **Karakter Veritabanı**:
-   - Uygulama, karakter bilgilerini `characters.json` dosyasında saklar. Dosya mevcut değilse, ilk çalıştırmada otomatik oluşturulur.
+To contribute to this project, please follow these steps:
 
-## Kullanım
-
-1. **Uygulamayı Çalıştırma**:
-   ```bash
-   python QfAI.py
-   ```
-
-2. **Karakter Ekleme**:
-   - Sağ menüdeki `Karakter Ekle` butonunu kullanarak yeni bir karakter ekleyebilirsiniz.
-
-3. **Sorgu Çalıştırma**:
-   - Karakter seçimi yapıp, alt kısımdaki metin alanına sorgunuzu yazın ve `Çalıştır` butonuna tıklayın.
-
-4. **Videoyu Oynatma**:
-   - Uygulama, yüklediğiniz ses dosyasını klonlayarak Gemini'den aldığı çıktıya klon seslendirme ve dudak senkronizasyonu yaparak videoyu oluşturur ve otomatik oynatır.
-
-## Dosya Yapısı
-
-- `QfAI.py`: Ana uygulama dosyası.
-- `config.json`: API ayarlarını içeren yapılandırma dosyası.
-- `characters.json`: Karakter bilgilerini saklar.
-- `outputs/`: Uygulama tarafından oluşturulan çıktı dosyalarının kaydedileceği klasör.
-
-## Lisans
-
-Bu proje, MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına göz atın.
-
-## Katkıda Bulunma
-
-Katkıda bulunmak için lütfen aşağıdaki adımları takip edin:
-1. Projeyi forklayın.
-2. Yeni bir branch oluşturun (`git checkout -b feature-isim`).
-3. Değişikliklerinizi yapın ve commit edin (`git commit -m 'Yeni özellik'`).
-4. Branch'i push edin (`git push origin feature-isim`).
-5. Bir Pull Request oluşturun.
-
----
-
-### İletişim
-Eğer herhangi bir sorunuz veya öneriniz varsa, lütfen benimle iletişime geçin.
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Make your changes and commit them (git commit -m 'Add new feature').
+Push your branch (git push origin feature-name).
+Open a Pull Request.
+Contact
+If you have any questions or suggestions, feel free to reach out to me.

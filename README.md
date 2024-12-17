@@ -3,7 +3,7 @@
 #  Question for AI (QfAI)
 
 Question for AI (QfAI) is a user-friendly AI application built using Python and PyQt5. This application generates responses to text-based queries on videos and provides voice responses. Additionally, it offers features such as character creation and management, including personalized voices and media handling.
-
+This app was created by Arda Demirkıran and Niyazi Mert Işıksal.
 ![WhatsApp Image 2024-11-28 at 20 30 14](https://github.com/user-attachments/assets/fff8890d-5236-42ed-83d3-7d79c312b8c7)
 
 #  Features
